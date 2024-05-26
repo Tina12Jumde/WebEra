@@ -1,0 +1,140 @@
+/* theme for website */
+/* gobal css */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --color-1: #0C0C0C;
+    --color-2: #481E14;
+    --color-3: #9B3922;
+    --color-4: #F2613F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Code Pro", monospace;
+}
+
+/* end of gobal css */
+
+/* contact navbar start */
+
+.navbar-contact-text {
+    color: var(--color-4);
+}
+
+/* contact navbar ends */
+
+/* main navbar starts */
+
+.main-navbar-logo {
+    color: var(--color-1) !important;
+}
+
+.main-navbar-cta {
+    background-color: var(--color-1);
+    font-weight: bold;
+    border-radius: 24px;
+}
+
+.main-navbar-cta .nav-link {
+    color: var(--color-4) !important;
+}
+
+.navbar-nav .nav-link {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+.navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(-45deg,var(--color-4) 50%,var(--color-1) 50%);
+    transition:all 0.5s ease;
+}
+
+.navbar-nav .nav-link:hover::before{
+    width: 100%;
+} 
+
+/* main navbar ends */
+
+/* mobile menu special starts */
+.mobile-menu-icon-container{
+    background-color: var(--color-1);
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(1,1fr);
+}
+
+.mobile-menu-icon{
+    cursor: pointer;
+    padding: 5%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--bs-white);
+}
+
+.mobile-menu-icon a{
+    color:var(--bs-white) !important;
+}
+
+.testimonial-trigger{
+    width: 75px;
+    height:75px;
+    background-color: white !important;
+    border-radius: 100%;
+    position:relative;
+    top: -20%;
+}
+
+.testimonial-trigger i{
+    padding: 20%;
+    background-color: var(--color-1);
+    border-radius: 100%;
+}
+
+
+.mobile-menu-special{
+    position: fixed;
+    width:100%;
+    bottom:0;
+    z-index:999999999;
+}
+
+/* mobile menu speican ends */
+
+/* rotate animation */
+
+.rotate-text-container{
+  position: static;
+  animation: rotateText 10s linear infinite;
+}
+
+#hero-rotate-text span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transform-origin: 0 150px;
+}
+
+@keyframes rotateText {
+
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
